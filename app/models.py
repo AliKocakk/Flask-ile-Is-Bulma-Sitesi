@@ -10,10 +10,10 @@ from app import app, db
 
 
 app.config['MAIL_SERVER'] = 'smtp.office365.com'
-app.config['MAIL_PORT'] = 587
+app.config['MAIL_PORT'] = ***
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'alikocak2035@hotmail.com'
-app.config['MAIL_PASSWORD'] = 'internetprogramlama1'
+app.config['MAIL_USERNAME'] = 'alikocak****@hotmail.com'
+app.config['MAIL_PASSWORD'] = '***'
 app.config['MAIL_DEFAULT_SENDER'] = 'alikocak2035@hotmail.com'
 
 mail = Mail(app)
