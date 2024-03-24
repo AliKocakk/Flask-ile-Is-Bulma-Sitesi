@@ -1,0 +1,556 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <!-- job section -->
+  <section class="job_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          RECENT & FEATURED JOBS
+        </h2>
+      </div>
+      <div class="job_container">
+        <h4 class="job_heading">
+          Featured Jobs
+        </h4>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="{{ url_for('static', filename='images/job_logo1.png') }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Development Team Lead
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      <span>
+                        Washington. D.C.
+                      </span>
+                    </h6>
+                    <h6>
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                      <span>
+                        $1200 - $1300
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <button class="fav-btn">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
+                <a href="{{ url_for('apply') }}" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="{{ url_for('static', filename='images/job_logo2.png') }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Make my website responsive device compatible
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      <span>
+                        New York
+                      </span>
+                    </h6>
+                    <h6>
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                      <span>
+                        $200 - $340
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <button class="fav-btn">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
+                <a href="{{ url_for('apply') }}" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="job_container">
+        <h4 class="job_heading">
+          Recent Jobs
+        </h4>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="{{ url_for('static', filename='images/job_logo3.png') }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Looking Graphic Designer (Logo + UI)
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      <span>
+                        Washington. D.C.
+                      </span>
+                    </h6>
+                    <h6>
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                      <span>
+                        $1200/mo
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <button class="fav-btn">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
+                <a href="{{ url_for('apply') }}" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="{{ url_for('static', filename='images/job_logo6.png') }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Are you Typography Expert?
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      <span>
+                        New York
+                      </span>
+                    </h6>
+                    <h6>
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                      <span>
+                        $56 - $90
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <button class="fav-btn">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
+                <a href="{{ url_for('apply') }}" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="{{ url_for('static', filename='images/job_logo5.png') }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Looking WordPress Developer for ThemeForest
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      <span>
+                        Washington. D.C.
+                      </span>
+                    </h6>
+                    <h6>
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                      <span>
+                        $400 - $540
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <button class="fav-btn">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
+                <a href="#" class="apply-btn" data-toggle="modal" data-target="#applyModal">
+                  Başvur
+                </a>
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="{{ url_for('static', filename='images/job_logo4.png') }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Hiring Web Designer for Project
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      <span>
+                        Washington. D.C.
+                      </span>
+                    </h6>
+                    <h6>
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                      <span>
+                        $350 - $450
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <button class="fav-btn">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
+                <a href="" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="job_container">
+        <h4 class="job_heading">
+          More Jobs
+        </h4>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="{{ url_for('static', filename='images/job_logo7.png') }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    UX/UI Designer Wanted
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      <span>
+                        San Francisco
+                      </span>
+                    </h6>
+                    <h6>
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                      <span>
+                        $1500 - $1800
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <button class="fav-btn">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
+                <a href="{{ url_for('apply') }}" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Diğer iş kutularını buraya ekleyin -->
+          <!-- 2 -->
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="{{ url_for('static', filename='images/job_logo8.png') }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Data Scientist Position
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      <span>
+                        Chicago
+                      </span>
+                    </h6>
+                    <h6>
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                      <span>
+                        $1800 - $2000
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <button class="fav-btn">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
+                <a href="{{ url_for('apply') }}" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="{{ url_for('static', filename='images/job_logo9.png') }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Social Media Manager
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      <span>
+                        Los Angeles
+                      </span>
+                    </h6>
+                    <h6>
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                      <span>
+                        $1200 - $1500
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <button class="fav-btn">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
+                <a href="{{ url_for('apply') }}" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="{{ url_for('static', filename='images/job_logo10.png') }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Java Developer Needed
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      <span>
+                        Seattle
+                      </span>
+                    </h6>
+                    <h6>
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                      <span>
+                        $1600 - $1900
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <button class="fav-btn">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
+                <a href="{{ url_for('apply') }}" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 5 -->
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="{{ url_for('static', filename='images/job_logo11.png') }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Content Marketing Specialist
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      <span>
+                        Austin
+                      </span>
+                    </h6>
+                    <h6>
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                      <span>
+                        $1300 - $1600
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <button class="fav-btn">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
+                <a href="{{ url_for('apply') }}" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 6 -->
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="{{ url_for('static', filename='images/job_logo12.png') }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Mobile App Developer
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      <span>
+                        San Diego
+                      </span>
+                    </h6>
+                    <h6>
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                      <span>
+                        $1800 - $2200
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <button class="fav-btn">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
+                <a href="{{ url_for('apply') }}" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 7 -->
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="{{ url_for('static', filename='images/job_logo13.png') }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Frontend Developer Position
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      <span>
+                        Portland
+                      </span>
+                    </h6>
+                    <h6>
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                      <span>
+                        $1600 - $1900
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <button class="fav-btn">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
+                <a href="{{ url_for('apply') }}" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 8 -->
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="{{ url_for('static', filename='images/job_logo14.png') }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Senior Software Engineer
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      <span>
+                        Boston
+                      </span>
+                    </h6>
+                    <h6>
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                      <span>
+                        $2000 - $2400
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <button class="fav-btn">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
+                <a href="{{ url_for('apply') }}" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  <!-- end job section -->
+  
+{% endblock %}
+
+</body>
+
+</html>

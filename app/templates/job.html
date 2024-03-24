@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <!-- job section -->
+  <section class="job_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          RECENT & FEATURED JOBS
+        </h2>
+      </div>
+      <div class="job_container">
+        {% for job in jobs %}
+          {% if loop.index % 2 == 1 %}
+            <div class="row">
+          {% endif %}
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="{{ url_for('static', filename='images/' + job.image_filename) }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    {{ job.title }}
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      <span>
+                        {{ job.location }}
+                      </span>
+                    </h6>
+                    <h6>
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                      <span>
+                        {{ job.salary_range }}
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <button class="fav-btn">
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
+                <a href="#" class="apply-btn" data-toggle="modal" data-target="#applyModal{{ job.id }}">
+                    Apply Now
+                </a>
+              </div>
+
+              <!-- Modal -->
+              <style>
+  .modal-title {
+    color: black; /* veya başka bir renk seçimi */
+  }
+</style>
+              <style>
+                .custom-label {
+                  color: black; /* veya başka bir renk seçimi */
+                }
+              </style>
+              <div class="modal fade" id="applyModal{{ job.id }}" tabindex="-1" role="dialog" aria-labelledby="applyModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="applyModalLabel">Apply for {{ job.title }}</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form method="POST" action="{{ url_for('apply', job_id=job.id) }}">
+                        <!-- Your application form fields go here (name, email, phone, linkedin) -->
+                        <div class="form-group">
+                            <div class="custom-label">Full Name</div>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="custom-label">Email</div>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="custom-label">LinkedIn Profile</div>
+                            <input type="text" class="form-control" id="linkedin" name="linkedin">
+                        </div>
+                        <div class="form-group">
+                            <div class="custom-label">Phone Number</div>
+                            <input type="tel" class="form-control" id="phone" name="phone">
+                        </div>
+                    
+                        <!-- Add other fields as needed -->
+                        <input type="hidden" name="job_title" value="{{ job.title }}">
+                    
+                        <button type="submit" class="btn btn-primary">Submit Application</button>
+                    </form>
+                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% if loop.index % 2 == 0 or loop.last %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endblock %}
